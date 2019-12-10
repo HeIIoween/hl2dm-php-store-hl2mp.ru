@@ -47,7 +47,7 @@ $_SESSION['product'] = parse_ini_file('ini/product.ini',true);
 	<HR color="#172331"/>
 	<div class="rcpt_item" onclick="openrcpt()" id="rcpt"><img src="images/noavatar.jpg" class="avatar"><?php echo $tr_loading; ?></div>
 	<div style="width: 100%; position: absolute; bottom: 0; text-align: center;">
-		<a href="https://hl2mp.ru">hl2mp.ru</a>
+		2019 &copy; <a href="https://hl2mp.ru">hl2mp.ru</a>
 	</div>
 </div>
 <div id="content" class="content load">

@@ -1,0 +1,268 @@
+body {
+	font-family: Arial;
+	font-size: 12px;
+	color: #EBEBEB;
+	opacity: 0.90;
+	margin: 5px;
+	background-color: rgba(16, 24, 34, 0.90);
+	overflow: hidden;
+}
+
+a, a:hover {
+	color: #EBEBEB;
+}
+
+.menu {
+	width: 180px;
+	height: 100%;
+	float: left;
+	position: relative;
+}
+
+.menu_item {
+	cursor: default;
+	margin: auto;
+	width: calc(100% - 5px);
+	background: linear-gradient(to right, rgba(23,35,49,1) 0%,rgba(23,35,49,1) 100%);
+	border-radius: 3px;
+	margin-bottom: 3px;
+	padding: 3px;
+}
+
+.menu_item:hover {
+	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%);
+	color: #fff;
+}
+
+.menu_item.select {
+	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%);
+	color: #fff;
+}
+
+.content {
+	overflow-y: auto;
+	overflow-x: hidden;
+	width: calc(100% - 187px);
+	height:100%;
+	float: right;
+	text-align: center;
+}
+
+.content.load {
+	background-position: center;
+    background-repeat: no-repeat;
+	background-image: url(../images/loading.gif);
+}
+
+.product {
+	border-radius: 3px;
+	width: calc(100%/3 - 3px);
+	height: 130px;
+	background-color: #172331;
+	display: inline-block;
+	margin-right:3px;
+	margin-bottom:3px;
+	position:relative;
+	overflow:hidden;
+	float: left;
+}
+
+.product .overlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(54,89,115,.50);
+	z-index: 1;
+}
+
+.product:hover .overlay {
+	display: block;
+}
+
+.product span {
+	cursor: default;
+	display:inline-block;
+	position:absolute;
+	top:7px;
+	left:0px;
+	color:#5AC0F4;
+	text-shadow: black 1px 1px 0px;
+	border-radius: 0 3px 3px 0;
+	background-color:rgba(0,0,0,.25);
+	padding:3px 8px;
+	z-index:2;
+}
+
+.product img {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.favorites-icon {
+	position:absolute;
+	top:10px;
+	right:10px;
+	font-size: 21px;
+	cursor: pointer;
+	z-index: 2;
+	user-select: none;
+}
+
+.favorites-icon.select {
+	color: #FFB000;
+}
+
+.blocker {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	z-index:3;
+	background-color: rgba(0, 0, 0, 0.85);
+}
+
+.load-img {
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -8px;
+	margin-top: -8px;
+	z-index:auto;
+}
+
+.info {
+	max-height:80%;
+	min-width: 180px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index:4;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.log {
+	padding: 6px;
+	width:60%;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -30%;
+	background: rgba(39, 59, 82);
+	border-radius: 3px;
+	border: 1px solid #5AC0F4;
+	z-index:3;
+}
+
+.icon-buy-true {
+	color: #8FB93B;
+	position: relative;
+	float: right;
+	top: 8px;
+	line-height: 0;
+	font-size: 24px;
+}
+
+.icon-buy-false {
+	color: red;
+	position: relative;
+	float: right;
+	top: 8px;
+	line-height: 0;
+	font-size: 24px;
+}
+
+.icon-change-rcpt {
+	color: white;
+	position: relative;
+	float: right;
+	top: 2;
+	right: 8px;
+	font-size: 24px; 
+	line-height: 30px;
+}
+
+.avatar {
+	width: 32px;
+	height: 32px;
+	vertical-align:middle;
+	margin:0 7px 0 0;
+	border: 1px solid #8FB93B;
+	border-radius: 3px;
+}
+
+.right-text {
+	vertical-align: middle;
+	display: inline-block;
+	width: 32px;
+}
+
+.rcpt_item {
+	color: #8FB93B;
+	cursor: default;
+	margin: auto;
+	width: calc(100% - 5px);
+	background-color: rgba(23, 35, 49, 1);
+	border-radius: 3px;
+	margin-bottom: 3px;
+	padding: 3px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.rcpt_item.current {
+	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%);
+	color: #fff;
+}
+
+.rcpt_item:hover {
+	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%);
+	color: #fff;
+}
+
+.hide {
+	display:none;
+}
+
+hr {
+	width: calc(100% - 5px);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #273B52;
+	border-radius: 3px;
+}
+
+@media ( max-width: 768px ) {
+	.product {
+		width: calc(50% - 3px);
+		height: 90px;
+	}
+}
+
+@media ( min-width: 1080px ) {
+	.product {
+		width: calc(100%/4 - 3px);
+	}
+}
